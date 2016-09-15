@@ -12,5 +12,6 @@ test:
 deploy to production:
   when: manual
   stage: deploy
-  script: echo 'test'
+  script:
+    - sshpass -p $DEPLOY_PASSWORD rsync -avz * $DEPLOY_USER@$DEPLOY_SERVER
   environment: production
