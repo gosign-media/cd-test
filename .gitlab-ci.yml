@@ -9,7 +9,8 @@ test:
   script:
     - php -l *.php
 
-production:
+deploy to production:
+  when: manual
   stage: deploy
   script: echo 'test'
   environment: production
