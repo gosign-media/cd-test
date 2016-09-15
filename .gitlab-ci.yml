@@ -1,7 +1,13 @@
 image: gosignmedia/deploy
 
 stages:
+- test
 - deploy
+
+test:
+  stage: test
+  script:
+    - php -l *.php
 
 production:
   stage: deploy
