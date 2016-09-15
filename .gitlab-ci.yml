@@ -1,0 +1,9 @@
+image: gosignmedia/deploy
+
+stages:
+- deploy
+
+production:
+  stage: deploy
+  script: echo 'test'
+  environment: production
