@@ -10,7 +10,7 @@ test:
     - php -l *.php
 
 deploy to production:
-  when: manual
+#  when: manual
   stage: deploy
   script:
     - sshpass -p $DEPLOY_PASSWORD rsync -avz * $DEPLOY_USER@$DEPLOY_SERVER:/web/
