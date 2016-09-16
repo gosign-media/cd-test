@@ -1,3 +1,7 @@
+dependencies:
+  override:
+    - sudo apt-get install sshpass
+
 checkout:
   post:
     - git submodule sync
