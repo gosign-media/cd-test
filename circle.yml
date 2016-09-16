@@ -10,4 +10,5 @@ test:
 deployment:
   production:
     branch: master
-    commands: sshpass -p $DEPLOY_PASSWORD rsync -e "ssh -o StrictHostKeyChecking=no" -avz * $DEPLOY_USER@$DEPLOY_SERVER:/web/
+    commands:
+      - sshpass -p $DEPLOY_PASSWORD rsync -e "ssh -o StrictHostKeyChecking=no" -avz * $DEPLOY_USER@$DEPLOY_SERVER:/web/
